@@ -21,7 +21,7 @@ Fixed to work with POA
 Clone the repository, install node dependencies, and run the pm2 daemon.
 
 ```bash
-git clone https://github.com/goerli/ethstats-client.git
+git clone https://github.com/ZeljkoBenovic/ethstats-client.git
 cd ethstats-client/
 npm install
 sudo npm install -g pm2
