@@ -2,7 +2,7 @@
   {
     "name"              : "node-app",
     "script"            : "app.js",
-    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_date_format"   : "DD-MM-YYYY HH:mm Z",
     "merge_logs"        : false,
     "watch"             : false,
     "max_restarts"      : 10,
@@ -13,11 +13,11 @@
       "NODE_ENV"        : "production",
       "RPC_HOST"        : "localhost",
       "RPC_PORT"        : "8545",
-      "LISTENING_PORT"  : "30303",
-      "INSTANCE_NAME"   : "",
+      "LISTENING_PORT"  : "",
+      "INSTANCE_NAME"   : "node1",
       "CONTACT_DETAILS" : "",
-      "WS_SERVER"       : "wss://rpc.ethstats.net",
-      "WS_SECRET"       : "see http://forum.ethereum.org/discussion/2112/how-to-add-yourself-to-the-stats-dashboard-its-not-automatic",
+      "WS_SERVER"       : "ws://localhost:3000",
+      "WS_SECRET"       : "",
       "VERBOSITY"       : 2
     }
   }
