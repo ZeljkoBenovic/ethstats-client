@@ -1,0 +1,114 @@
+version: "3"
+services:
+
+  server:
+    image: zeljkoiphouse/ethstats-server
+    environment:
+      WS_SECRET: password
+    ports:
+      - 3000:3000
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  client_1:
+    image: zeljkoiphouse/ethstats-client
+    environment:
+      RPC_HOST: 10.153.1.4
+      RPC_PORT: 8545
+      WS_IP: server
+      WS_PORT: 3000
+      WS_SECRET: password
+      NODE_NAME: Node-1
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  client_2:
+    image: zeljkoiphouse/ethstats-client
+    environment:
+      RPC_HOST: 10.153.1.5
+      RPC_PORT: 8545
+      WS_IP: server
+      WS_PORT: 3000
+      WS_SECRET: password
+      NODE_NAME: Node-2
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  client_3:
+    image: zeljkoiphouse/ethstats-client
+    environment:
+      RPC_HOST: 10.153.1.6
+      RPC_PORT: 8545
+      WS_IP: server
+      WS_PORT: 3000
+      WS_SECRET: password
+      NODE_NAME: Node-3
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  client_4:
+    image: zeljkoiphouse/ethstats-client
+    environment:
+      RPC_HOST: 10.153.1.7
+      RPC_PORT: 8545
+      WS_IP: server
+      WS_PORT: 3000
+      WS_SECRET: password
+      NODE_NAME: Node-4
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  client_5:
+    image: zeljkoiphouse/ethstats-client
+    environment:
+      RPC_HOST: 10.153.1.8
+      RPC_PORT: 8545
+      WS_IP: server
+      WS_PORT: 3000
+      WS_SECRET: password
+      NODE_NAME: Node-5
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  client_6:
+    image: zeljkoiphouse/ethstats-client
+    environment:
+      RPC_HOST: 10.153.1.9
+      RPC_PORT: 8545
+      WS_IP: server
+      WS_PORT: 3000
+      WS_SECRET: password
+      NODE_NAME: Node-6
+    networks:
+      - ethstats
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+networks:
+  ethstats:
